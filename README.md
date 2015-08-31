@@ -8,7 +8,8 @@ The intent is to test SQLIO performance based on the following variables:
 </ul>
 <b>Prereq's:</b>
 <br>
-These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured.
+These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured. <br>
+Instructions for getting your Powershell environment up and running with AWS Tools for Powershell can be found here: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html.
 <br>
 <hr>
 <br>
