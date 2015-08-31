@@ -16,6 +16,7 @@ These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS vol
 These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured. <br>
 Instructions for getting your Powershell environment up and running with AWS Tools for Powershell can be found here: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html.
 <br>
+<br>
 <b>2. Create an S3 bucket to store the SQLIO benchmark results.</b>
 <br>
 You will need to create a bucket in S3 to store the output of the SQLIO.exe. It is helpful to keep the results of these benchmarks on hand for future reference.
