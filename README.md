@@ -44,7 +44,7 @@ Your template will look similiar to the template below, you can download the tem
 <hr>
 <b>PARAMETERS:</b>
 <br>
-Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. You should modify the paramenter defaults as follows:
+Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. Use the guides below to customize the parameters based on your test goals.
 <br>
 Replace the following parameters with your AWS specific values
 <br>
@@ -58,7 +58,6 @@ Replace the following parameters with your AWS specific values
 <span class="pl-c">$InstanceProfile = "arn:aws:iam::*****"</span>
 </pre>
 </div>
-<br>
 Replace the following parameters with your desired test defaults
 <br>
 <div class="highlight highlight-PowerShell">
@@ -69,7 +68,6 @@ Replace the following parameters with your desired test defaults
 <span class="pl-c">$Fast = $false #Only run the 4k read and write tests</span>
 </pre>
 </div>
-<br>
 Replace the following required parameters with your test values when prompted
 <br>
 <div class="highlight highlight-PowerShell">
