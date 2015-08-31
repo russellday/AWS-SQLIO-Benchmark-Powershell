@@ -46,12 +46,12 @@ Your template will look similiar to the template below, you can download the tem
 <br>
 Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. You should modify the paramenter defaults as follows:
 <br>
-*    Replace with your AWS value <br>
-**   Replace with your desired test value or leave as default<br>
+"*"    Replace with your AWS value <br>
+"**"   Replace with your desired test value or leave as default<br>
 <br>
 <div class="highlight highlight-PowerShell">
 <pre>
-<span class="pl-c">** $InstanceType = "m3.large"</span>
+<span class="pl-c">"**" $InstanceType = "m3.large"</span>
 <span class="pl-c">*  $KeyPairName = "aws_20150520" #Only required if you might need to log in to the instance to debug.</span> 
 <span class="pl-c">*  $Region = "us-east-1"</span>
 <span class="pl-c">*  $SecurityGroup = "sg-076e8a60"</span>
