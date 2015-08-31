@@ -51,26 +51,18 @@ Your template will look similiar to the template below, you can download the tem
 <span class="pl-c">$Region = "us-east-1"</span>
 <span class="pl-c">$SecurityGroup = "sg-076e8a60"</span>
 <span class="pl-c">$TagName = "SQLIO Benchmark"</span>
-<span class="pl-c">$InstanceType = "m3.large"</span>
-<span class="pl-c">$InstanceType = "m3.large"</span>
-<span class="pl-c">$InstanceType = "m3.large"</span>
-<span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c">[int32] $VolumeSizeGiB</span>
+<span class="pl-c">[int32] $TestFileSizeGB</span>
+<span class="pl-c">[int32] $IOPS</span>
+<span class="pl-c">[string] $VolumeType = "gp2"</span>
+
+<span class="pl-c">$S3ResultsBucketName = "sqlioresults"</span>
+<span class="pl-c">$SNSTopic = "arn:aws:sns:****" #Optional</span>
+<span class="pl-c">$InstanceProfile = "arn:aws:iam::*****"</span>
+<span class="pl-c">$UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1")</span>
+<span class="pl-c">$Fast = $false #Only run the 4k read and write tests </span>
 </pre>
 </div>
-<br>
-<code>
-
-,
-[Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, 
-[Parameter(Mandatory=$true)][int32] $TestFileSizeGB, 
-[Parameter(Mandatory=$true)][int32] $IOPS, 
-[Parameter(Mandatory=$false)][string] $VolumeType = "gp2", 
-[Parameter(Mandatory=$false)][string] $S3ResultsBucketName = "sqlioresults", 
-$SNSTopic = "arn:aws:sns:****", #Optional
-$InstanceProfile = "arn:aws:iam::*****", 
-$UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"), 
-$Fast = $false #Only run the 4k read and write tests 
-</code>
 <br>
 <b>USAGE EXMAMPES:</b>
 <br>
