@@ -46,18 +46,18 @@ Your template will look similiar to the template below, you can download the tem
 <br>
 <div class="highlight highlight-PowerShell">
 <pre>
-<span class="pl-c"># AWS SDK Path </span>
-<span class="pl-c1">Add-Type</span> <span class="pl-k">-</span>Path <span class="pl-s">"test...</span>
+<span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c1">$KeyPairName = "aws_20150520" #Only required if you might need to log in to the instance to debug.</span> 
+<span class="pl-c">$Region = "us-east-1"</span>
+<span class="pl-c">$SecurityGroup = "sg-076e8a60"</span>
+<span class="pl-c">$TagName = "SQLIO Benchmark"</span>
+<span class="pl-c">$InstanceType = "m3.large"</span>
 </pre>
 </div>
 <br>
 <code>
-$InstanceType = "m3.large",
-$KeyPairName = "aws_20150520", #Only required if you might need to log in to the instance to debug.
-$Region = "us-east-1",
-$SecurityGroup = "sg-076e8a60",
-$SubnetId = "subnet-42773535",
-$TagName = "SQLIO Benchmark",
+
+,
 [Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, 
 [Parameter(Mandatory=$true)][int32] $TestFileSizeGB, 
 [Parameter(Mandatory=$true)][int32] $IOPS, 
