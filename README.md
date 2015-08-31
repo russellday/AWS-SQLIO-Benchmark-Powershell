@@ -47,7 +47,7 @@ Your template will look similiar to the template below, you can download the tem
 Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. You should modify the paramenter defaults as follows:
 <br>
 *    Replace with your AWS value <br>
-**   Replace with your desired test value or leave as default
+**   Replace with your desired test value or leave as default<br>
 <br>
 <div class="highlight highlight-PowerShell">
 <pre>
