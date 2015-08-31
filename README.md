@@ -8,6 +8,7 @@ These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS vol
 <ul>
 <li> EC2 Instance Type
 <li> EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD)
+<li> Volume Size
 </ul>
 <b>Prereq's:</b>
 <br>
