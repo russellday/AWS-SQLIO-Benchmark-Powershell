@@ -4,6 +4,8 @@ Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks an
 <br>
 <b>OVERVIEW:</b>
 <br>
+When considering running SQL server on AWS (either RDS or rolling your own via EC2) you should carefully consider your storage options. The two options that provide good levels of performance and high availability are Provisioned IOPS SSD EBS volumes or General Purpose SSD EBS volumes.
+<br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
 <ul>
 <li> EC2 Instance Type
