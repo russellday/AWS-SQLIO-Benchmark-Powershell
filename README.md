@@ -52,6 +52,9 @@ Your template will look similiar to the template below, you can download the tem
 <span class="pl-c">$SecurityGroup = "sg-076e8a60"</span>
 <span class="pl-c">$TagName = "SQLIO Benchmark"</span>
 <span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c">$InstanceType = "m3.large"</span>
 </pre>
 </div>
 <br>
