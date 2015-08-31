@@ -30,36 +30,36 @@ This step is optional, but if you provide the ARN to a SNS topic the process wil
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <br>
-{
-    "Version": "2012-10-17",
-    "Statement": [
+{<br>
+    "Version": "2012-10-17",<br>
+    "Statement": [<br>
         {
-            "Sid": "Stmt1440524194000",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:TerminateInstances"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Action": [
-                "s3:Put*"
-            ],
-            "Effect": "Allow",
-            "Resource": "arn:aws:s3:::sqlioresults/*"
-        },
-        {
-            "Action": [
-                "sns:Publish"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:sns:us-east-1:831402888584:Topic1"
-            ]
-        }
-    ]
+            "Sid": "Stmt1440524194000",<br>
+            "Effect": "Allow",<br>
+            "Action": [<br>
+                "ec2:TerminateInstances"<br>
+            ],<br>
+            "Resource": [<br>
+                "*"<br>
+            ]<br>
+        },<br>
+        {<br>
+            "Action": [<br>
+                "s3:Put*"<br>
+            ],v
+            "Effect": "Allow",<br>
+            "Resource": "arn:aws:s3:::sqlioresults/*"<br>
+        },<br>
+        {<br>
+            "Action": [<br>
+                "sns:Publish"<br>
+            ],<br>
+            "Effect": "Allow",<br>
+            "Resource": [<br>
+                "arn:aws:sns:us-east-1:831402888584:Topic1"<br>
+            ]<br>
+        }<br>
+    ]<br>
 }
 <br>
 <hr>
