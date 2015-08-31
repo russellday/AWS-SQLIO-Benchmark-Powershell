@@ -50,7 +50,7 @@ Replace the following parameters with your AWS specific values
 <br>
 <div class="highlight highlight-PowerShell">
 <pre>
-<span class="pl-c">$KeyPairName = "aws_20150520" #Only required if you might need to log in to the instance to debug.</span
+<span class="pl-c">$KeyPairName = "aws_20150520" #Only required if you might need to log in to the instance to debug.</span>
 <span class="pl-c">$Region = "us-east-1"</span>
 <span class="pl-c">$SecurityGroup = "sg-076e8a60"</span>
 <span class="pl-c">$S3ResultsBucketName = "sqlioresults"</span>
