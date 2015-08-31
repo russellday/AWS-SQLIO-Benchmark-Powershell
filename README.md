@@ -44,6 +44,7 @@ Your template will look similiar to the template below, you can download the tem
 <hr>
 <b>PARAMETERS:</b>
 <br>
+<font style="FONT-FAMILY: consolas">
 $InstanceType = "m3.large",<br>
 $KeyPairName = "aws_20150520", #Only required if you might need to log in to the instance to debug.<br>
 $Region = "us-east-1",<br>
@@ -59,6 +60,7 @@ $SNSTopic = "arn:aws:sns:****", #Optional<br>
 $InstanceProfile = "arn:aws:iam::*****", <br>
 $UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"), <br>
 $Fast = $false #Only run the 4k read and write tests <br>
+</font>
 <br>
 <b>USAGE EXMAMPES:</b>
 <br>
