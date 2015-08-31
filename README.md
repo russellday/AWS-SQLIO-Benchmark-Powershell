@@ -12,6 +12,7 @@ These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS vol
 </ul>
 <b>PRE-REQ'S:</b>
 <br>
+<br>
 <b>1. Configure Powershell environment with AWS Tools for Powershell</b>
 These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured. <br>
 Instructions for getting your Powershell environment up and running with AWS Tools for Powershell can be found here: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html.
@@ -25,6 +26,7 @@ You will need to create a bucket in S3 to store the output of the SQLIO.exe. It 
 <b>3. Create an SNS topic to receive email notification when process completes (Optional Step)</b>
 <br>
 This step is optional, but if you provide the ARN to a SNS topic the process will send an email notification when the process completes. This is helpful, the SQLIIO tests can take over an hour to complete.
+<br>
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <hr>
