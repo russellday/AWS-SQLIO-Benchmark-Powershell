@@ -1,9 +1,3 @@
-<css>
-.pl-sr .pl-sra, .pl-sr .pl-sre {
-    color: #183691;
-}
-</css>
-
 # AWS-SQLIO-Benchmark-Powershell
 Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks and store the results in S3.
 <br>
