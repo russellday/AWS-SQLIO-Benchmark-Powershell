@@ -22,8 +22,7 @@ function New-SQLIOInstance
 {
   [CmdletBinding()]
   Param
-  (
-    [Parameter(Mandatory=$false)][string] $AvailabilityZone,                     
+  (                    
     [Parameter(Mandatory=$false)][string] $InstanceType = "m3.large",
     [Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520",
     [Parameter(Mandatory=$false)][string] $Region = "us-east-1",	
@@ -126,10 +125,6 @@ function New-SQLIOInstance
     $params.Add("KeyName", $KeyPairName);
     $params.Add("MaxCount", $Count);
     $params.Add("MinCount", $Count);
-    if ($AvailabilityZone)
-    {
-      $params.Add("Placement_AvailabilityZone", $AvailabilityZone);
-    }	
 	
 	#data volume
 	$volume = New-Object Amazon.EC2.Model.EbsBlockDevice;
