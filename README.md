@@ -77,7 +77,6 @@ Replace the following required parameters with your test values when prompted
 <span class="pl-c">$IOPS = For $VolumeType = io1, integer value between 100 and 20000 else ($VolumeType=gp2) blank</span>
 </pre>
 </div>
-<br>
 <b>Example Usage 1:</b> 
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
