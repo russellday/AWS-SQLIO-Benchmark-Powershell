@@ -30,6 +30,13 @@ This step is optional, but if you provide the ARN to a SNS topic the process wil
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <br>
+You will need to create an IAM role that grants the EC2 instance the scripts launch access to perform a few tasks:
+<ul>
+<li>Place the SQLIO results in an S3 bucket
+<li>TODO
+<li>Terminate the EC2 instance once the SQLIO testing is complete
+</ul>
+<br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_EC2_POLICY.png">
 <br>
 <hr>
@@ -47,12 +54,5 @@ Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
 <b>Example Usage 2:</b> 
 <br>
 Launch EC2 Instance with a General Purpose SSD EBS Volume.
-<br>
-You will need to create an IAM role that grants the EC2 instance the scripts launch access to perform a few tasks:
-<ul>
-<li>Place the SQLIO results in an S3 bucket
-<li>TODO
-<li>Terminate the EC2 instance once the SQLIO testing is complete
-</ul>
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_GP2.png">
