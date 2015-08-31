@@ -18,6 +18,8 @@ Instructions for getting your Powershell environment up and running with AWS Too
 <br>
 <b>2. Create an S3 bucket to store the SQLIO benchmark results.</b>
 <br>
+You will need to create a bucket in S3 to store the output of the SQLIO.exe. It is helpful to keep the results of these benchmarks on hand for future reference.
+<br>
 <b>3. Create an SNS topic to receive email notification when process completes (Optional Step)</b>
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
