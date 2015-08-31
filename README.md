@@ -55,7 +55,7 @@ $TagName = "SQLIO Benchmark",<br>
 [Parameter(Mandatory=$true)][int32] $IOPS, <br>	
 [Parameter(Mandatory=$false)][string] $VolumeType = "gp2", <br>
 [Parameter(Mandatory=$false)][string] $S3ResultsBucketName = "sqlioresults", <br>
-$SNSTopic = "arn:aws:sns:****", #Optional: Include if you would like to be notified on completion <br>
+$SNSTopic = "arn:aws:sns:****", #Optional<br>
 [Parameter(Mandatory=$false)][string] $InstanceProfile = "arn:aws:iam::*****", <br>
 [Parameter(Mandatory=$false)][string] $UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"), <br>
 [Parameter(Mandatory=$false)][Bool] $Fast = $false #Only run the 4k read and write tests <br>
