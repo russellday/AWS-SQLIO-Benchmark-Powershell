@@ -44,6 +44,22 @@ Your template will look similiar to the template below, you can download the tem
 <hr>
 <b>PARAMETERS:</b>
 <br>
+  [Parameter(Mandatory=$false)][string] $InstanceType = "m3.large",
+  [Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520",
+  [Parameter(Mandatory=$false)][string] $Region = "us-east-1",	
+	[Parameter(Mandatory=$false)][string] $SecurityGroup = "sg-076e8a60",
+	[Parameter(Mandatory=$false)][string] $SubnetId = "subnet-42773535",
+	[Parameter(Mandatory=$false)][string] $TagName = "SQLIO Benchmark",
+	[Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, 
+	[Parameter(Mandatory=$true)][int32] $TestFileSizeGB, 
+	[Parameter(Mandatory=$true)][int32] $IOPS, 	
+	[Parameter(Mandatory=$false)][string] $VolumeType = "gp2",
+	[Parameter(Mandatory=$false)][string] $S3ResultsBucketName = "sqlioresults",
+	[Parameter(Mandatory=$false)][string] $SNSTopic = "arn:aws:sns:****", #Optional: Include if you would like to be notified on completion
+	[Parameter(Mandatory=$false)][string] $InstanceProfile = "arn:aws:iam::*****",
+  [Parameter(Mandatory=$false)][string] $UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"),
+	[Parameter(Mandatory=$false)][Bool] $Fast = $false #Only run the 4k read and write tests
+<br>
 <b>USAGE EXMAMPES:</b>
 <br>
 <br>
