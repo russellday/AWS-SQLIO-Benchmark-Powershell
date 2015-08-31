@@ -19,7 +19,7 @@ These scripts should run from a machine running Powershell with the AWS Powershe
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
 <br>
-<img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_IOPS.png">
+<img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_IOPS_v2.png">
 <br>
 <b>Example Usage 2:</b> 
 <br>
