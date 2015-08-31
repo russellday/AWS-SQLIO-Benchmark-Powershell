@@ -37,6 +37,8 @@ You will need to create an IAM role that grants the EC2 instance the scripts lau
 <li>Terminate the EC2 instance once the SQLIO testing is complete
 </ul>
 <br>
+Your template will look similiar to the template below, you can download the template below <a href="https://s3.amazonaws.com/russell.day/SQLIO_EC2_POLICY.png" target="_blank">here</a>.
+<br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_EC2_POLICY.png">
 <br>
 <hr>
