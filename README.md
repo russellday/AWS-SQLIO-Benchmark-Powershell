@@ -29,6 +29,39 @@ This step is optional, but if you provide the ARN to a SNS topic the process wil
 <br>
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
+<br>
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1440524194000",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:TerminateInstances"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:Put*"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::sqlioresults/*"
+        },
+        {
+            "Action": [
+                "sns:Publish"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:sns:us-east-1:831402888584:Topic1"
+            ]
+        }
+    ]
+}
+<br>
 <hr>
 <b>PARAMETERS:</b>
 <br>
