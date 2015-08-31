@@ -78,9 +78,6 @@ Replace the following required parameters with your test values when prompted
 </pre>
 </div>
 <br>
-<b>USAGE EXMAMPES:</b>
-<br>
-<br>
 <b>Example Usage 1:</b> 
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
