@@ -72,7 +72,7 @@ Replace the following required parameters with your test values when prompted
 <br>
 <div class="highlight highlight-PowerShell">
 <pre>
-<span class="pl-c">[int32] $VolumeSizeGiB</span>
+<span class="pl-c">[int32] $VolumeSizeGiB #Integer value between 4 (4 GiB) and 16384 (16 TB)</span>
 <span class="pl-c">[int32] $TestFileSizeGB</span> 
 <span class="pl-c">[int32] $IOPS #For $VolumeType = io1, integer value between 100 and 20000 else blank/span>
 </pre>
