@@ -31,14 +31,14 @@ This step is optional, but if you provide the ARN to a SNS topic the process wil
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <br>
 {<br>
-    "Version": "2012-10-17",<br>
-    "Statement": [<br>
-        {
-            "Sid": "Stmt1440524194000",<br>
-            "Effect": "Allow",<br>
-            "Action": [<br>
-                "ec2:TerminateInstances"<br>
-            ],<br>
+        "Version": "2012-10-17",<br>
+       "Statement": [<br>
+          {<br>
+               "Sid": "Stmt1440524194000",<br>
+               "Effect": "Allow",<br>
+               "Action": [<br>
+                   "ec2:TerminateInstances"<br>
+              ],<br>
             "Resource": [<br>
                 "*"<br>
             ]<br>
