@@ -63,8 +63,8 @@ Replace the following parameters with your desired test defaults
 <div class="highlight highlight-PowerShell">
 <pre>
 <span class="pl-c">$InstanceType = "m3.large"</span>
-<span class="pl-c">$TagName = "SQLIO Benchmark"</span>
-<span class="pl-c">$VolumeType = "gp2"</span>
+<span class="pl-c">$TagName = "SQLIO Benchmark" #Name tag value</span>
+<span class="pl-c">$VolumeType = "gp2" #either gp2 or io1</span>
 <span class="pl-c">$Fast = $false #Only run the 4k read and write tests</span>
 </pre>
 </div>
