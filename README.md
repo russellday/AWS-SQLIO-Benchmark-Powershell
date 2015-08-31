@@ -55,7 +55,6 @@ Your template will look similiar to the template below, you can download the tem
 <span class="pl-c">[int32] $TestFileSizeGB</span>
 <span class="pl-c">[int32] $IOPS</span>
 <span class="pl-c">[string] $VolumeType = "gp2"</span>
-
 <span class="pl-c">$S3ResultsBucketName = "sqlioresults"</span>
 <span class="pl-c">$SNSTopic = "arn:aws:sns:****" #Optional</span>
 <span class="pl-c">$InstanceProfile = "arn:aws:iam::*****"</span>
