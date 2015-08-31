@@ -7,9 +7,7 @@ Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks an
 When considering running SQL server on AWS (either RDS or rolling your own via EC2) you should carefully consider your storage options. The two options that provide good levels of performance and high availability are Provisioned IOPS SSD EBS volumes or General Purpose SSD EBS volumes.
 <br>
 <br>
-The main differences between General Purpose and Provioned IOPs volumes are performance and cost. General Purpose SSD volumes are designed to provide a baseline of 3 IOPS per GB <a href="https://aws.amazon.com/blogs/aws/now-available-16-tb-and-20000-iops-elastic-block-store-ebs-volumes/" target="_blank">(more details)</a>. 
-<br>
-With this understanding, there are situations where you can actually get a relatively high performance volume in terms of IOPS at a much lower price point by using General Purponse SSD volumes instead of Provisioned IOPS.
+The main differences between General Purpose and Provioned IOPs volumes are performance and cost. General Purpose SSD volumes are designed to provide a baseline of 3 IOPS per GB <a href="https://aws.amazon.com/blogs/aws/now-available-16-tb-and-20000-iops-elastic-block-store-ebs-volumes/" target="_blank">(more details)</a>. With this understanding, there are situations where you can actually get a relatively high performance volume in terms of IOPS at a much lower price point by using General Purponse SSD volumes instead of Provisioned IOPS. Take for example a sitiation where your database needs around 7000 IOPS. You could provision a 7000 Provisioned IOPS volume at around $ or you could provision a larger than needed General Purpose SSD volume (remember 3IOPs/GB) and get more IOPS for about half the price.
 <br>
 <br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
