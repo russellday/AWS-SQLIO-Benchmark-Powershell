@@ -74,7 +74,7 @@ Replace the following required parameters with your test values when prompted
 <pre>
 <span class="pl-c">[int32] $VolumeSizeGiB</span>
 <span class="pl-c">[int32] $TestFileSizeGB</span> 
-<span class="pl-c">[int32] $IOPS #if volume type equals gp2 (general purpose SSD) leave blank when prompted</span>
+<span class="pl-c">[int32] $IOPS #For $VolumeType = io1, integer value between 100 and 20000 else blank/span>
 </pre>
 </div>
 <br>
