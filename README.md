@@ -1,6 +1,8 @@
 # AWS-SQLIO-Benchmark-Powershell
 Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks and store results in S3.
 <br>
+<b>Overview:</b>
+<br>
 The intent is to test SQLIO performance based on the following variables:
 <ul>
 <li> EC2 Instance Type
