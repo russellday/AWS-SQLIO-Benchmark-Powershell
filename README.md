@@ -16,7 +16,11 @@ These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS vol
 These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured. <br>
 Instructions for getting your Powershell environment up and running with AWS Tools for Powershell can be found here: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html.
 <br>
-<b>2. Create a IAM Role for the instnaces launched via the Powershell script.</b>
+<b>2. Create an S3 bucket to store the SQLIO benchmark results.</b>
+<br>
+<b>3. Create an SNS topic to receive email notification when process completes (Optional Step)</b>
+<br>
+<b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <hr>
 <b>PARAMETERS:</b>
 <br>
