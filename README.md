@@ -45,21 +45,21 @@ Your template will look similiar to the template below, you can download the tem
 <b>PARAMETERS:</b>
 <br>
 <code>
-$InstanceType = "m3.large",<br>
-$KeyPairName = "aws_20150520", #Only required if you might need to log in to the instance to debug.<br>
-$Region = "us-east-1",<br>
-$SecurityGroup = "sg-076e8a60",<br>
-$SubnetId = "subnet-42773535",<br> 
-$TagName = "SQLIO Benchmark",<br>
-[Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, <br>
-[Parameter(Mandatory=$true)][int32] $TestFileSizeGB, <br>
-[Parameter(Mandatory=$true)][int32] $IOPS, <br>	
-[Parameter(Mandatory=$false)][string] $VolumeType = "gp2", <br>
-[Parameter(Mandatory=$false)][string] $S3ResultsBucketName = "sqlioresults", <br>
-$SNSTopic = "arn:aws:sns:****", #Optional<br>
-$InstanceProfile = "arn:aws:iam::*****", <br>
-$UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"), <br>
-$Fast = $false #Only run the 4k read and write tests <br>
+$InstanceType = "m3.large",
+$KeyPairName = "aws_20150520", #Only required if you might need to log in to the instance to debug.
+$Region = "us-east-1",
+$SecurityGroup = "sg-076e8a60",
+$SubnetId = "subnet-42773535",
+$TagName = "SQLIO Benchmark",
+[Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, 
+[Parameter(Mandatory=$true)][int32] $TestFileSizeGB, 
+[Parameter(Mandatory=$true)][int32] $IOPS, 
+[Parameter(Mandatory=$false)][string] $VolumeType = "gp2", 
+[Parameter(Mandatory=$false)][string] $S3ResultsBucketName = "sqlioresults", 
+$SNSTopic = "arn:aws:sns:****", #Optional
+$InstanceProfile = "arn:aws:iam::*****", 
+$UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"), 
+$Fast = $false #Only run the 4k read and write tests 
 </code>
 <br>
 <b>USAGE EXMAMPES:</b>
