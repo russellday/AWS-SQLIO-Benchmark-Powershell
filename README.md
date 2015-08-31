@@ -2,7 +2,7 @@
 Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks and store the results in S3.
 <br>
 <br>
-<b>Overview:</b>
+<b>OVERVIEW:</b>
 <br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
 <ul>
@@ -10,7 +10,7 @@ These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS vol
 <li> EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD)
 <li> Volume Size
 </ul>
-<b>Prereq's:</b>
+<b>PRE-REQ'S:</b>
 <br>
 <b>1. Configure Powershell environment with AWS Tools for Powershell</b>
 These scripts should run from a machine running Powershell with the AWS Powershell toolkit installed and configured. <br>
@@ -18,8 +18,9 @@ Instructions for getting your Powershell environment up and running with AWS Too
 <br>
 <b>2. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <hr>
+<b>PARAMETERS:</b>
 <br>
-<b>Usage Examples:</b>
+<b>USAGE EXMAMPES:</b>
 <br>
 <br>
 <b>Example Usage 1:</b> 
