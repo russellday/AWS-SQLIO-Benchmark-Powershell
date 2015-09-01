@@ -24,7 +24,7 @@ A visual of this automated process is below.
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
 <br>
-The SQLIO Results from the scenario above are below:
+The SQLIO Results from the scenario above are below, max latency took a small hit but the overall IOs/sec were much higher on the General Purpose EBS volumes. Not too bad for almost half the price.
 <br>
 <br>
 <b><u>Provisioned IOPS (8000) 2TB EBS Volume</u></b>
@@ -51,7 +51,7 @@ Max_Latency(ms): 82<br>
 <br>
 8 threads writing...<br>
 throughput metrics:<br>
-IOs/sec:  9758.89<br>
+<b>IOs/sec:  9758.89</b><br>
 MBs/sec:    38.12<br>
 latency metrics:<br>
 Min_Latency(ms): 1<br>
@@ -60,7 +60,7 @@ Max_Latency(ms): 210<br>
 <br>
 8 threads reading...<br>
 throughput metrics:<br>
-IOs/sec:  9802.78<br>
+<b>IOs/sec:  9802.78</b><br>
 MBs/sec:    38.29<br>
 latency metrics:<br>
 Min_Latency(ms): 0<br>
