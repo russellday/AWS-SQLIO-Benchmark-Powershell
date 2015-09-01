@@ -37,6 +37,7 @@ latency metrics:<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 7<br>
 Max_Latency(ms): 99<br>
+<br>
 8 threads reading...<br>
 throughput metrics:<br>
 IOs/sec:  8142.30<br>
@@ -56,6 +57,7 @@ latency metrics:<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 6<br>
 Max_Latency(ms): 210<br>
+<br>
 8 threads reading...<br>
 throughput metrics:<br>
 IOs/sec:  9802.78<br>
