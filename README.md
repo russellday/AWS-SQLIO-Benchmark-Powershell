@@ -24,13 +24,12 @@ Below is a visual representation of this automated process.
 The SQLIO Results from the scenario above are below, max latency took a small hit but the overall IOs/sec were much higher on the General Purpose EBS volumes. Not too bad for almost half the price.
 <br>
 <br>
-<b><u>Provisioned IOPS (8000) 2TB EBS Volume</u></b>
 <br>
 <table>
 <tr>
   <tr>
-    <td colspan=2>h</td>
-    <td colspan=2>b</td>
+    <td colspan=2><b><u>Provisioned IOPS (8000) 2TB EBS Volume</u></b></td>
+    <td colspan=2><b><u>General Purpose 4TB EBS Volume</u></b></td>
   </tr>
   <td>
     8 threads writing...<br>
@@ -42,7 +41,6 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
     Avg_Latency(ms): 7<br>
     Max_Latency(ms): 99
   </td>
-  <td>a</td>
   <td>
     8 threads reading...<br>
     throughput metrics:<br>
@@ -51,7 +49,17 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
     latency metrics:<br>
     Min_Latency(ms): 0<br>
     Avg_Latency(ms): 7<br>
-    Max_Latency(ms): 82
+    Max_Latency(ms): 82  
+  </td>
+  <td>
+    8 threads writing...<br>
+    throughput metrics:<br>
+    <b>IOs/sec:  9758.89</b><br>
+    MBs/sec:    38.12<br>
+    latency metrics:<br>
+    Min_Latency(ms): 1<br>
+    Avg_Latency(ms): 6<br>
+    Max_Latency(ms): 210
   </td>
   <td>c</td>
 </tr>
