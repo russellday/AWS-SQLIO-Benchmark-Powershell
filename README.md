@@ -32,7 +32,7 @@ IOs/sec:  8145.77<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 7<br>
 Max_Latency(ms): 99<br>
-....
+<br>
 8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
 IOs/sec:  8142.30<br>
 Min_Latency(ms): 0<br>
