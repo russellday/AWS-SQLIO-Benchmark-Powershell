@@ -28,6 +28,10 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
 <br>
 <table>
 <tr>
+  <tr>
+    <td colspan=2>h</td>
+    <td colspan=2>b</td>
+  </tr>
   <td>
     8 threads writing...<br>
     throughput metrics:<br>
@@ -38,6 +42,7 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
     Avg_Latency(ms): 7<br>
     Max_Latency(ms): 99
   </td>
+  <td>a</td>
   <td>
     8 threads reading...<br>
     throughput metrics:<br>
@@ -48,6 +53,7 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
     Avg_Latency(ms): 7<br>
     Max_Latency(ms): 82
   </td>
+  <td>c</td>
 </tr>
 </table>
 <b><u>General Purpose 4TB EBS Volume</u></b>
