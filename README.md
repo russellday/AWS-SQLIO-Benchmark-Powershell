@@ -36,8 +36,8 @@ MBs/sec:    31.81<br>
 latency metrics:<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 7<br>
-Max_Latency(ms): 99v
-8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+Max_Latency(ms): 99<br>
+8 threads reading...<br>
 throughput metrics:<br>
 IOs/sec:  8142.30<br>
 MBs/sec:    31.80<br>
@@ -48,7 +48,7 @@ Max_Latency(ms): 82<br>
 <br>
 <b><u>General Purpose 4TB EBS Volume</u></b>
 <br>
-8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+8 threads writing...<br>
 throughput metrics:<br>
 IOs/sec:  9758.89<br>
 MBs/sec:    38.12<br>
