@@ -73,32 +73,6 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
   </td>
 </tr>
 </table>
-<b><u>General Purpose 4TB EBS Volume</u></b>
-<br>
-<table>
-  <tr>
-    <td>
-      8 threads writing...<br>
-      throughput metrics:<br>
-      <b>IOs/sec:  9758.89</b><br>
-      MBs/sec:    38.12<br>
-      latency metrics:<br>
-      Min_Latency(ms): 1<br>
-      Avg_Latency(ms): 6<br>
-      Max_Latency(ms): 210
-    </td>
-    <td>
-      8 threads reading...<br>
-      throughput metrics:<br>
-      <b>IOs/sec:  9802.78</b><br>
-      MBs/sec:    38.29<br>
-      latency metrics:<br>
-      Min_Latency(ms): 0<br>
-      Avg_Latency(ms): 6<br>
-      Max_Latency(ms): 228
-    </td>
-  <tr>
-</table>
 <br>
 <b>PRE-REQ'S</b>
 <br>
