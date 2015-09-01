@@ -13,12 +13,8 @@ The main differences between General Purpose and Provioned IOPs volumes are perf
 So how do we prove this theory? SQLIO Benchmarking is a good start. SQLIO is a benchmarking tool that tests disk subsystem performance for workloads consistent with SQL server. You can download SQLIO <a href="http://www.microsoft.com/en-us/download/details.aspx?id=20163">here</a> and this <a href="http://blogs.msdn.com/b/sqlmeditation/archive/2013/04/04/choosing-what-sqlio-tests-to-run-and-automating-sqlio-testing-somewhat.aspx">link</a> discusses how to run the tool and some additional considerations specific to SQL server.
 <br>
 <br>
-These Powershell scripts are desinged to automate this SQLIO benchmarking process. Allowing you to specify the following as variables; EC2 Instance Type, EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD), and Volume Size. The scripts will launch and EC2 instance, create and attach and EBS volume, download and install SQLIO, run SQLIO, and place the results in S3.
-<ul>
-<li> EC2 Instance Type
-<li> EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD)
-<li> Volume Size
-</ul>
+These Powershell scripts are desinged to automate this SQLIO benchmarking process. Allowing you to specify the following as variables: EC2 Instance Type, EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD), and Volume Size. The scripts will launch and EC2 instance, create and attach and EBS volume, download and install SQLIO, run SQLIO, and place the results in S3.
+<br>
 A visual of this automated process is below.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
