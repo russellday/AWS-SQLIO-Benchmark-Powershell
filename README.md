@@ -23,11 +23,7 @@ A visual of this automated process is below.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
-8 threads writing for 360 secs to file d:\TestFile.DAT
-	using 4KB random IOs
-	enabling multiple I/Os per thread with 8 outstanding
-	buffering set to use hardware disk cache (but not file cache)<br>
-<br>
+8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
 IOs/sec:  8145.77<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 7<br>
