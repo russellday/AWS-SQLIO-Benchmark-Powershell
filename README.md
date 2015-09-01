@@ -29,7 +29,7 @@ The SQLIO Results from the scenario above are below:
 <br>
 <b><u>Provisioned IOPS (8000) 2TB EBS Volume</u></b>
 <br>
-8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+8 threads writing...<br>
 throughput metrics:<br>
 IOs/sec:  8145.77<br>
 MBs/sec:    31.81<br>
@@ -41,7 +41,7 @@ Max_Latency(ms): 99<br>
 throughput metrics:<br>
 IOs/sec:  8142.30<br>
 MBs/sec:    31.80<br>
-latency metrics:v
+latency metrics:<br>
 Min_Latency(ms): 0<br>
 Avg_Latency(ms): 7<br>
 Max_Latency(ms): 82<br>
@@ -56,7 +56,7 @@ latency metrics:<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 6<br>
 Max_Latency(ms): 210<br>
-8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+8 threads reading...<br>
 throughput metrics:<br>
 IOs/sec:  9802.78<br>
 MBs/sec:    38.29<br>
