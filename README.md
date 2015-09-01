@@ -12,6 +12,7 @@ The main differences between General Purpose and Provioned IOPs volumes are perf
 <br>
 So how do we prove this theory? SQLIO Benchmarking is a good start. SQLIO is a benchmarking tool that tests disk subsystems for workloads consistent with SQL server.
 <br>
+<br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
 <ul>
 <li> EC2 Instance Type
