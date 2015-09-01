@@ -34,7 +34,7 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
   <td>
     8 threads writing...<br>
     throughput metrics:<br>
-    IOs/sec:  8145.77<br>
+    <b>IOs/sec:  8145.77</b><br>
     MBs/sec:    31.81<br>
     latency metrics:<br>
     Min_Latency(ms): 1<br>
@@ -44,7 +44,7 @@ The SQLIO Results from the scenario above are below, max latency took a small hi
   <td>
     8 threads reading...<br>
     throughput metrics:<br>
-    IOs/sec:  8142.30<br>
+    <b>IOs/sec:  8142.30</b><br>
     MBs/sec:    31.80<br>
     latency metrics:<br>
     Min_Latency(ms): 0<br>
