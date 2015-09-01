@@ -19,6 +19,9 @@ These Powershell scripts are desinged to automate this SQLIO benchmarking proces
 <li> EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD)
 <li> Volume Size
 </ul>
+<br>
+<img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
+<br>
 <b>PRE-REQ'S</b>
 <br>
 <br>
