@@ -48,22 +48,22 @@ Max_Latency(ms): 82<br>
 <br>
 <b><u>General Purpose 4TB EBS Volume</u></b>
 <br>
-8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)
-throughput metrics:
-IOs/sec:  9758.89
-MBs/sec:    38.12
-latency metrics:
-Min_Latency(ms): 1
-Avg_Latency(ms): 6
-Max_Latency(ms): 210
-8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)
-throughput metrics:
-IOs/sec:  9802.78
-MBs/sec:    38.29
-latency metrics:
-Min_Latency(ms): 0
-Avg_Latency(ms): 6
-Max_Latency(ms): 228
+8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+throughput metrics:<br>
+IOs/sec:  9758.89<br>
+MBs/sec:    38.12<br>
+latency metrics:<br>
+Min_Latency(ms): 1<br>
+Avg_Latency(ms): 6<br>
+Max_Latency(ms): 210<br>
+8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+throughput metrics:<br>
+IOs/sec:  9802.78<br>
+MBs/sec:    38.29<br>
+latency metrics:<br>
+Min_Latency(ms): 0<br>
+Avg_Latency(ms): 6<br>
+Max_Latency(ms): 228<br>
 <br>
 <b>PRE-REQ'S</b>
 <br>
