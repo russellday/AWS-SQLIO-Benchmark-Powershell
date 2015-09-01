@@ -20,6 +20,8 @@ These Powershell scripts are desinged to automate this SQLIO benchmarking proces
 <li> Volume Size
 </ul>
 <br>
+A visual of this automated process is below.
+<br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
 <b>PRE-REQ'S</b>
