@@ -23,12 +23,21 @@ A visual of this automated process is below.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
+The SQLIO Results from the scenario above are below:
+<br>
+<b>Provisioned IOPS (8000) 2TB EBS Volume</b>
+<br>
 8 threads writing for 360 secs to file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
 IOs/sec:  8145.77<br>
 Min_Latency(ms): 1<br>
 Avg_Latency(ms): 7<br>
 Max_Latency(ms): 99<br>
 ....
+8 threads reading for 360 secs from file d:\TestFile.DAT using 4KB random IOs enabling multiple I/Os per thread with 8 outstanding buffering set to use hardware disk cache (but not file cache)<br>
+IOs/sec:  8142.30<br>
+Min_Latency(ms): 0<br>
+Avg_Latency(ms): 7<br>
+Max_Latency(ms): 82<br>
 <br>
 <b>PRE-REQ'S</b>
 <br>
