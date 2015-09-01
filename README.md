@@ -91,14 +91,14 @@ You will need to create a bucket in S3 to store the output of the SQLIO.exe. It 
 <br>
 <b>3. Create an SNS topic to receive email notification when process completes (Optional Step)</b>
 <br>
-This step is optional, but if you provide the ARN to a SNS topic the process will send an email notification when the process completes. This is helpful, the SQLIIO tests can take over an hour to complete.
+If you provide the ARN of an SNS topic configured for email, the process will send an email notification when the process completes. This is helpful, the full SQLIIO tests can take over an hour to complete.
 <br>
 <br>
 <b>4. Create a IAM Role for the instnaces launched via the Powershell script.</b>
 <br>
-You will need to create an IAM role that grants the EC2 instance the scripts launch access to perform a few tasks:
+You will need to create an IAM role that grants the EC2 instance launched via the PowerShell scripts access to perform the following tasks:
 <ul>
-<li>Place the SQLIO results in an S3 bucket
+<li>Place the SQLIO results text file in a S3 bucket
 <li>Publish a message to an SNS topic (Optional)
 <li>Terminate the EC2 instance once the SQLIO testing is complete
 </ul>
