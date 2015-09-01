@@ -23,7 +23,9 @@ A visual of this automated process is below.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
+<br>
 The SQLIO Results from the scenario above are below:
+<br>
 <br>
 <b>Provisioned IOPS (8000) 2TB EBS Volume</b>
 <br>
