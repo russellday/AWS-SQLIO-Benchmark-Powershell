@@ -16,7 +16,7 @@ So how do we prove this theory? SQLIO Benchmarking is a good start. SQLIO is a b
 These Powershell scripts are desinged to automate this SQLIO benchmarking process. Allowing you to specify the following as variables: EC2 Instance Type, EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD), and Volume Size. The scripts will launch and EC2 instance, create and attach and EBS volume, download and install SQLIO, run SQLIO, and place the results in S3.
 <br>
 <br>
-A visual of this automated process is below.
+Below is a visual representation of this automated process.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_Process_Diagram.png">
 <br>
