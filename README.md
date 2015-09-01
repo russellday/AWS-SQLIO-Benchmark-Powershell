@@ -109,7 +109,7 @@ You will need to create an IAM role that grants the EC2 instance the scripts lau
 Your template will look similiar to the template below, you can download the template below <a href="https://s3.amazonaws.com/russell.day/SQLIO_EC2Instance_Policy.xml" target="_blank">here</a>.
 <br>
 <br>
-<img src="https://s3.amazonaws.com/russell.day/SQLIO_EC2_POLICY.png">
+<img src="https://s3.amazonaws.com/russell.day/SQLIO_InstancePolicyV2.png">
 <br>
 <hr>
 <b>PARAMETERS</b>
