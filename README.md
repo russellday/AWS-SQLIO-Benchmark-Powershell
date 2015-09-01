@@ -4,7 +4,7 @@ Powershell scripts to automate the SQLIO benchmarking processing. Launch and AWS
 <br>
 <b>OVERVIEW</b>
 <br>
-When running SQL server on AWS (either on RDS or hosting your own via EC2) you should carefully consider your storage options. The two options that provide optimal levels of performance and high availability are Provisioned IOPS SSD EBS volumes or General Purpose SSD EBS volumes.
+When running SQL server on AWS (either on RDS or hosting your own on EC2) you should carefully consider your storage options. The two options that provide optimal levels of performance and high availability are Provisioned IOPS SSD EBS volumes or General Purpose SSD EBS volumes.
 <br>
 <br>
 The main differences between General Purpose and Provioned IOPs volumes are performance and cost. Provisioned IOP EBS volumes are designed to provide predictable and consistent performance. General Purpose SSD volumes are designed to provide a baseline of 3 IOPS per GB <a href="https://aws.amazon.com/blogs/aws/now-available-16-tb-and-20000-iops-elastic-block-store-ebs-volumes/" target="_blank">(more details)</a>. With this understanding, there are situations where you can actually achieve greater performance in terms of IOPS at a much lower cost by using General Purponse SSD volumes instead of Provisioned IOPS. For example, assume your 1 TB database needs around 8k IOPS. You could provision a 8k Provisioned IOPs 2 TB (room for logs and backup) volume at around $776/month or you could provision a larger (4TB) than needed General Purpose SSD volume (remember 3 IOPs/GB) and get more IOPS (max 10k) for about $406/month. Essentially, by over-provisioning the volume you can take advantage of the additional IOPS that come along with the increased volume size.
