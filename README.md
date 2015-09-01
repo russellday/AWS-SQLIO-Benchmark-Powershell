@@ -23,8 +23,6 @@ Below is a visual representation of this automated process.
 <br>
 The SQLIO Results from the scenario above are below, max latency took a small hit but the overall IOs/sec were much higher on the General Purpose EBS volumes. Not too bad for almost half the price.
 <br>
-<br>
-<br>
 <table>
 <tr>
   <tr>
