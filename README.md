@@ -19,7 +19,7 @@ These Powershell scripts are desinged to automate this SQLIO benchmarking proces
 <li> EBS Volume Type (either Provisioned IOPS SSD or General Purpose SSD)
 <li> Volume Size
 </ul>
-<b>PRE-REQ'S:</b>
+<b>PRE-REQ'S</b>
 <br>
 <br>
 <b>1. Configure Powershell environment with AWS Tools for Powershell</b>
@@ -51,7 +51,7 @@ Your template will look similiar to the template below, you can download the tem
 <img src="https://s3.amazonaws.com/russell.day/SQLIO_EC2_POLICY.png">
 <br>
 <hr>
-<b>PARAMETERS:</b>
+<b>PARAMETERS</b>
 <br>
 Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. Use the guides below to customize the parameters based on your test goals.
 <br>
@@ -86,13 +86,13 @@ Replace the following required parameters with your test values when prompted
 <span class="pl-c">$IOPS = For $VolumeType = io1, integer value between 100 and 20000 else ($VolumeType=gp2) blank</span>
 </pre>
 </div>
-<b>Example Usage 1:</b> 
+<b>Example Usage 1</b> 
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_IOPS_v2.png">
 <br>
-<b>Example Usage 2:</b> 
+<b>Example Usage 2</b> 
 <br>
 Launch EC2 Instance with a General Purpose SSD EBS Volume.
 <br>
