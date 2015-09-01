@@ -10,6 +10,8 @@ When considering running SQL server on AWS (either RDS or rolling your own via E
 The main differences between General Purpose and Provioned IOPs volumes are performance and cost. General Purpose SSD volumes are designed to provide a baseline of 3 IOPS per GB <a href="https://aws.amazon.com/blogs/aws/now-available-16-tb-and-20000-iops-elastic-block-store-ebs-volumes/" target="_blank">(more details)</a>. With this understanding, there are situations where you can actually get a relatively high performance volume in terms of IOPS at a much lower price point by using General Purponse SSD volumes instead of Provisioned IOPS. Take for example a sitiation where your 500 GB database needs around 8000 IOPS. You could provision a 8000 Provisioned 12 TB IOPS volume at around $648/month or you could provision a larger (4TB) than needed General Purpose SSD volume (remember 3IOPs/GB) and get more IOPS for about $406/month.
 <br>
 <br>
+So how do we prove this theory? SQLIO Benchmarking is a good start. SQLIO is a benchmarking tool that tests disk subsystems for workloads consistent with SQL server.
+<br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
 <ul>
 <li> EC2 Instance Type
