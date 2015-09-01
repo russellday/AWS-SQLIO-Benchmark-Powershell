@@ -142,13 +142,13 @@ Replace the following required parameters with your test values when prompted
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
 <br>
-<img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_IOPS_v2.png">
+<img src="https://s3.amazonaws.com/russell.day/SQLIO_Example_IOPS.png">
 <br>
 <b>Example Usage 2</b> 
 <br>
 Launch EC2 Instance with a General Purpose SSD EBS Volume.
 <br>
-<img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_GP2.png">
+<img src="https://s3.amazonaws.com/russell.day/SQLIO_Example_GP2.png">
 
 
 
