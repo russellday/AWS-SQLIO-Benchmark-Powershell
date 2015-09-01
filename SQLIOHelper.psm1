@@ -24,9 +24,9 @@ function New-SQLIOInstance
   Param
   (                    
     [Parameter(Mandatory=$false)][string] $InstanceType = "m3.large",
-    [Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520",
+    #[Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520",
+	#[Parameter(Mandatory=$false)][string] $SecurityGroup = "sg-076e8a60",	
     [Parameter(Mandatory=$false)][string] $Region = "us-east-1",	
-	[Parameter(Mandatory=$false)][string] $SecurityGroup = "sg-076e8a60",
 	[Parameter(Mandatory=$false)][string] $SubnetId = "subnet-42773535",
 	[Parameter(Mandatory=$false)][string] $TagName = "SQLIO Benchmark",
 	[Parameter(Mandatory=$true)][int32] $VolumeSizeGiB, 
@@ -122,7 +122,7 @@ function New-SQLIOInstance
     $params = @{};
     $params.Add("ImageID", $ImageID);
     $params.Add("InstanceType", $InstanceType);
-    $params.Add("KeyName", $KeyPairName);
+    #$params.Add("KeyName", $KeyPairName); Only for debug
     $params.Add("MaxCount", $Count);
     $params.Add("MinCount", $Count);
 	
@@ -141,7 +141,7 @@ function New-SQLIOInstance
 	$DeviceMapping.Ebs = $volume	
 	
 	$params.Add("InstanceProfile_Arn", $InstanceProfile);
-    $params.Add("SecurityGroupId", $SecurityGroup);
+    #$params.Add("SecurityGroupId", $SecurityGroup); #only for debug
 	$params.Add("SubnetId", $SubnetId);
     $params.Add("UserData", $UserData); 
 	$params.Add("BlockDeviceMapping", $DeviceMapping); 
