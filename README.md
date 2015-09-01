@@ -2,7 +2,16 @@
 Powershell scripts to launch AWS EC2 Instances, install SQLIO, run benchmarks and store the results in S3.
 <br>
 <br>
-<b>OVERVIEW:</b>
+<b>OVERVIEW</b>
+<br>
+When considering running SQL server on AWS (either RDS or rolling your own via EC2) you should carefully consider your storage options. The two options that provide good levels of performance and high availability are Provisioned IOPS SSD EBS volumes or General Purpose SSD EBS volumes.
+<br>
+<br>
+The main differences between General Purpose and Provioned IOPs volumes are performance and cost. General Purpose SSD volumes are designed to provide a baseline of 3 IOPS per GB <a href="https://aws.amazon.com/blogs/aws/now-available-16-tb-and-20000-iops-elastic-block-store-ebs-volumes/" target="_blank">(more details)</a>. With this understanding, there are situations where you can actually get a relatively high performance volume in terms of IOPS at a much lower price point by using General Purponse SSD volumes instead of Provisioned IOPS. Take for example a sitiation where your 500 GB database needs around 8000 IOPS. You could provision a 8000 Provisioned 1 TB IOPS volume at around $648/month or you could provision a larger (4TB) than needed General Purpose SSD volume (remember 3IOPs/GB) and get more IOPS for about $406/month.
+<br>
+<br>
+So how do we prove this theory? SQLIO Benchmarking is a good start. SQLIO is a benchmarking tool that tests disk subsystem performance for workloads consistent with SQL server. You can download SQLIO <a href="http://www.microsoft.com/en-us/download/details.aspx?id=20163">here</a> and this <a href="http://blogs.msdn.com/b/sqlmeditation/archive/2013/04/04/choosing-what-sqlio-tests-to-run-and-automating-sqlio-testing-somewhat.aspx">link</a> discusses how to run the tool and some additional considerations.
+<br>
 <br>
 These Powershell scripts are desinged to automate SQLIO benchmarking AWS EBS volumes with the following varaibles:
 <ul>
@@ -44,9 +53,39 @@ Your template will look similiar to the template below, you can download the tem
 <hr>
 <b>PARAMETERS:</b>
 <br>
-<b>USAGE EXMAMPES:</b>
+Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. Use the guides below to customize the parameters based on your test goals.
 <br>
+Replace the following parameters with your AWS specific values
 <br>
+<div class="highlight highlight-PowerShell">
+<pre>
+<span class="pl-c">$KeyPairName = "aws_20150520" #Only required if you might need to log in to the instance to debug.</span>
+<span class="pl-c">$Region = "us-east-1"</span>
+<span class="pl-c">$SecurityGroup = "sg-076e8a60"</span>
+<span class="pl-c">$S3ResultsBucketName = "sqlioresults"</span>
+<span class="pl-c">$SNSTopic = "arn:aws:sns:****" #Optional</span>
+<span class="pl-c">$InstanceProfile = "arn:aws:iam::*****"</span>
+</pre>
+</div>
+Replace the following parameters with your desired test defaults
+<br>
+<div class="highlight highlight-PowerShell">
+<pre>
+<span class="pl-c">$InstanceType = "m3.large"</span>
+<span class="pl-c">$TagName = "SQLIO Benchmark" #Name tag value</span>
+<span class="pl-c">$VolumeType = "gp2" #either gp2 or io1</span>
+<span class="pl-c">$Fast = $false #Only run the 4k read and write tests</span>
+</pre>
+</div>
+Replace the following required parameters with your test values when prompted
+<br>
+<div class="highlight highlight-PowerShell">
+<pre>
+<span class="pl-c">$VolumeSizeGiB = Integer value between 4 (4 GiB) and 16384 (16 TB)</span>
+<span class="pl-c">$TestFileSizeGB = Integer value between 10 (10 GB) and 9000 (9TB)</span> 
+<span class="pl-c">$IOPS = For $VolumeType = io1, integer value between 100 and 20000 else ($VolumeType=gp2) blank</span>
+</pre>
+</div>
 <b>Example Usage 1:</b> 
 <br>
 Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
@@ -58,3 +97,6 @@ Launch EC2 Instance with a Provisioned IOPS SSD EBS Volume.
 Launch EC2 Instance with a General Purpose SSD EBS Volume.
 <br>
 <img src="https://s3.amazonaws.com/russell.day/SQLIOBenchmark_Example_Usage_GP2.png">
+
+
+
