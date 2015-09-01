@@ -114,7 +114,7 @@ Your template will look similiar to the template below, you can download the tem
 <hr>
 <b>PARAMETERS</b>
 <br>
-Most of the parameters contain defaults. To allow for running a quick test with mininal inputs. Use the guides below to customize the parameters based on your test goals.
+Most of the parameters contain defaults to allow for running a quick test with mininal inputs. Use the guides below to customize the parameters based on your test goals.
 <br>
 Replace the following parameters with your AWS specific values
 <br>
