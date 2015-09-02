@@ -1,5 +1,5 @@
 # AWS-SQLIO-Benchmark-Powershell
-Powershell scripts to automate SQLIO benchmarking processing on AWS EBS Volumes.
+Powershell scripts to automate SQLIO benchmarking on AWS EBS Volumes.
 <br>
 <br>
 <b>OVERVIEW</b>
