@@ -3,13 +3,9 @@ $VerbosePreference = "Continue";
 $scriptpath = $MyInvocation.MyCommand.Path;
 $moduledirectory = Split-Path $scriptpath;
 
-[string] $script:RootPath = New-Item -Path "C:\Russell" -Force -Type directory;
-[string] $script:LogsPath = New-Item -Path (Join-Path $script:RootPath "Logs") -Force -Type directory;
-
 function Get-DefaultWindowsImage
 {
   return Get-EC2ImageByName -Names 'WINDOWS_2012R2_BASE'
-  #return (Get-EC2Image -Owner amazon -Filter @{ Name="platform"; Value="windows" }, @{ Name="architecture"; Value="x86_64" }) | Where-Object Name -like "Windows_Server-2012-RTM-English-64Bit-Base-*" | Select -First 1 -ExpandProperty ImageID;
 }
 
 function ConvertTo-Base64($string) {
@@ -23,9 +19,9 @@ function New-SQLIOInstance
   [CmdletBinding()]
   Param
   (                    
-    [Parameter(Mandatory=$false)][string] $InstanceType = "m3.large",
-    #[Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520",
-	#[Parameter(Mandatory=$false)][string] $SecurityGroup = "sg-076e8a60",
+    [Parameter(Mandatory=$false)][string] $InstanceType = "m4.xlarge",
+    #[Parameter(Mandatory=$false)][string] $KeyPairName = "aws_20150520", #only needed for debug
+	#[Parameter(Mandatory=$false)][string] $SecurityGroup = "sg-076e8a60", #only needed for debug
     [Parameter(Mandatory=$false)][string] $Region = "us-east-1",	
 	[Parameter(Mandatory=$false)][string] $SubnetId = "subnet-42773535",
 	[Parameter(Mandatory=$false)][string] $TagName = "SQLIO Benchmark",
@@ -46,9 +42,7 @@ function New-SQLIOInstance
 	$ImageID =  $ami[0].ImageId
   
  	$validVolumeTypes = 'gp2','io1';
-	if ($validVolumeTypes -match $VolumeType)
-	{} #valid range
-	else
+	if (-NOT $validVolumeTypes -match $VolumeType)
 	{
 		Write-Verbose "VolumeType parameter should be either gp2 or io1!";
 		return;
@@ -67,9 +61,7 @@ function New-SQLIOInstance
 		#Constraint: Range is 100 to 20000 for Provisioned IOPS (SSD) volumes
 		#The number of I/O operations per second (IOPS) to provision for the volume, with a maximum ratio of 30 IOPS/GiB.
 		
-		if ($IOPS -ge 100 -and $IOPS -le 20000)
-		{} #valid range
-		else
+		if (-NOT $IOPS -ge 100 -and $IOPS -le 20000)
 		{
 			Write-Verbose "Please enter a IOPS value between 100 and 20000)";
 			return;
@@ -83,17 +75,13 @@ function New-SQLIOInstance
 		}
 	}
   
-	if ($VolumeSizeGiB -ge 4 -and $VolumeSizeGiB -le 16384)
-	{} #valid range
-	else
+	if (-NOT $VolumeSizeGiB -ge 4 -and $VolumeSizeGiB -le 16384)
 	{
 		Write-Verbose "Please enter a volume size between 4 (4 GiB) and 16384 (16 TB)";
 		return;
 	}
 	
-	if ($TestFileSizeGB -ge 10 -and $TestFileSizeGB -le 9000)
-	{} #valid range
-	else	
+	if (-NOT $TestFileSizeGB -ge 10 -and $TestFileSizeGB -le 9000)
 	{
 		Write-Verbose "Please enter a test file size between 10 (10 GB) and 9000 (9TB)";
 		return;
