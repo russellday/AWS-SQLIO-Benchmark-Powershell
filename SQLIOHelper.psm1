@@ -33,7 +33,8 @@ function New-SQLIOInstance
 	[Parameter(Mandatory=$false)][string] $SNSTopic = "arn:aws:sns:us-east-1:831402888584:Topic1", #Optional: Include if you would like to be notified on completion
 	[Parameter(Mandatory=$false)][string] $InstanceProfile = "arn:aws:iam::831402888584:instance-profile/SQLIOResultsEC2",
     [Parameter(Mandatory=$false)][string] $UserScript = (Join-Path $script:moduledirectory "SQLIOBootstrap.ps1"),
-	[Parameter(Mandatory=$false)][Bool] $Fast = $false #Only run the 4k read and write tests
+	[Parameter(Mandatory=$false)][Bool] $Fast = $false,	#Only run the 4k read and write tests
+	[Parameter(Mandatory=$false)][int] $TestRuns = 1 #the number of times to run the SQLI tests
   )
   Process
   {
@@ -101,7 +102,7 @@ function New-SQLIOInstance
     if ($userScript -and (Test-Path $userScript))
     {
       $contents = "<powershell>`$TestFileSizeGB=$TestFileSizeGB;`$AWSRegion=`"$Region`";`$S3ResultsBucket=`"$S3ResultsBucketName`";";
-	  $contents = $contents +  "`$ResultsFileName=`"$TestDetails`";`$SNSTopic=`"$SNSTopic`";`$Fast=`"$Fast`";";
+	  $contents = $contents +  "`$ResultsFileName=`"$TestDetails`";`$SNSTopic=`"$SNSTopic`";`$Fast=`"$Fast`";`$TestRuns=`"$TestRuns`";";
 	  $contents = $contents + [System.IO.File]::ReadAllText($UserScript) + "</powershell>";
 	  $filePath = gi $UserScript;
       $UserData = ConvertTo-Base64($contents);

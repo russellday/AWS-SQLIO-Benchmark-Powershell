@@ -52,33 +52,38 @@ function Install-SQLIO
 
 function Invoke-SQLIO
 {
+	for($i=1; $i -le $TestRuns; $i++){
+		if ([Bool]::Parse($Fast)) 
+		{
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt	
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
+		}
+		else
+		{
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt	
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt	
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b16 -BH -LS d:\TestFile.DAT >> d:\results.txt	
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
 
-	if ([Bool]::Parse($Fast)) 
-	{
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT > d:\results.txt	
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
-	}
-	else
-	{
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT > d:\results.txt	
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt	
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -frandom -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b16 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt 
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
 
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt 
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -frandom -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b16 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
 
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kW -t8 -s360 -o8 -fsequential -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
-
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
-		d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b4 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b8 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b16 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b32 -BH -LS d:\TestFile.DAT >> d:\results.txt
+			d:\sqlio\sqlio.exe -kR -t8 -s360 -o8 -fsequential -b64 -BH -LS d:\TestFile.DAT >> d:\results.txt
+		}	
 	}
 }
 
